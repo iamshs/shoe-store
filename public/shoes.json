@@ -11,7 +11,7 @@
     },
     {
       "name" : "Nike SB57 CHAMPS",
-      "price" : 14,
+      "price" : 140,
       "rating" :5 ,
       "image" : "https://i.ibb.co/QjVPJ2C/nike-2.jpg",
       "brand" : " nike " ,
@@ -20,7 +20,7 @@
     },
     {
       "name" : "Nike Pegasus 39",
-      "price" : 12,
+      "price" : 120,
       "rating" : 5,
       "image" : "https://i.ibb.co/sV7y00h/nike-3.jpg",
       "brand" : " nike" ,
@@ -29,7 +29,7 @@
     },
     {
       "name" : "DAILY 3.0",
-      "price" : 14,
+      "price" : 140,
       "rating" : 5,
       "image" : "https://i.ibb.co/F5bzSzv/adidas-1.jpg",
       "brand" : "adidas" ,
@@ -38,7 +38,7 @@
     },
     {
       "name" : "QUESTAR FLOW NXT",
-      "price" : 12,
+      "price" : 120,
       "rating" : 5,
       "image" : "https://i.ibb.co/wR6Dd4Y/adidas-2.jpg",
       "brand" : "adidas" ,
@@ -47,7 +47,7 @@
     },
     {
       "name" : "SUPERSTAR SHOES",
-      "price" : 13,
+      "price" : 130,
       "rating" : 4,
       "image" : "https://i.ibb.co/B2CKn14/adidas-4.jpg",
       "brand" : "adidas" ,
@@ -56,7 +56,7 @@
     },
     {
       "name" : "ULTRABOOST 22",
-      "price" : 12,
+      "price" : 125,
       "rating" : 5,
       "image" : "https://i.ibb.co/5x01nYV/adidas-w-1.jpg",
       "brand" : "adidas" ,
@@ -65,7 +65,7 @@
     },
     {
       "name" : "Nike Air Max 90",
-      "price" : 12,
+      "price" : 128,
       "rating" :4 ,
       "image" : "https://i.ibb.co/gWcG8X7/nike-w-1.jpg",
       "brand" : "adidas" ,
