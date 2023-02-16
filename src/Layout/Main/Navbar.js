@@ -6,8 +6,9 @@ import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  
 
-  let activeClassName = " text-[#001134] ";
+  let activeClassName = " font-bold underline ";
   const menuItems = (
     <>
       <li className="flex items-center">
@@ -17,6 +18,16 @@ const Navbar = () => {
           to={"/"}
         >
         Home
+        </NavLink>
+       
+      </li>
+      <li>
+      
+        <NavLink
+          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          to={"/everything"}
+        >
+        Everything
         </NavLink>
        
       </li>

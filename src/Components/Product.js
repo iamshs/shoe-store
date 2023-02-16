@@ -1,7 +1,6 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import { AiFillShopping } from "react-icons/ai";
-import "./Style/Product.css";
 import { motion } from "framer-motion";
 import {item} from '../helpers/framer-motion'
 
