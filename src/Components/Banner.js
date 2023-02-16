@@ -1,20 +1,25 @@
 import React from "react";
-import Bg from "../assets/bg-home.jpg";
+import "./Style/Banner.css";
+import { motion } from "framer-motion";
 
 const Banner = () => {
+  const transition = { type: "spring", duration: 5 };
   return (
-    <div
-      style={{
-        backgroundImage: `url(${Bg})`,
-        backgroundColor: "#cccccc",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        height: "70vh"
-      }}
-    >
-      <h1>Buy your shoes</h1>
-    </div>
+    <section className="bg-home">
+      <div className="relative">
+        <motion.h1
+          transition={transition}
+          initial={{ left: -200 }}
+          whileInView={{ left: 20 }}
+          className="lg:text-7xl text-4xl md:text-5xl text-white lg:top-32 md:top-24 top-12 absolute"
+        >
+          Start Your Day
+        </motion.h1>
+        <h2 className="lg:text-5xl text-2xl md:text-4xl text-white absolute top-24 md:top-40  lg:top-56  lg:left-16 left-5">
+          With Your Brand
+        </h2>
+      </div>
+    </section>
   );
 };
 

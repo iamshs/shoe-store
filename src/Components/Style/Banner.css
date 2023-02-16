@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+.bg-home {
+    background: url('../../assets/bg-home.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: auto;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-home>div{
+    padding: 15rem 0rem;
+}
+
+
+
+
+@media screen and (max-width:767px) {
+   .bg-home{
+    background-attachment: unset;
+   } 
+   .bg-home>div{
+    padding: 10rem 0rem;
+}
+}
+
+@media screen and (min-width:767px) and (max-width:1024px) {
+    .bg-home{
+        background-attachment: unset;
+       }
+
+       .bg-home>div{
+        padding: 15rem 0rem;
+    }
+}
