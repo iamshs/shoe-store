@@ -1,0 +1,93 @@
+[
+    {
+        "name" : "Nike Air Force",
+        "price" : 130,
+        "rating" :5 ,
+        "image" :"https://i.ibb.co/gWLQNnF/nike-1.jpg " ,
+        "brand" : " nike ",
+        "gender" : "men ",
+        "detail" : "Shine in satin, stay classic in canvas or get luxe with leather. No matter what you choose, these AF1s are all about you. 12 color choices and an additional gum rubber option for the sole mean your design is destined to be one of a kind—just like you."
+
+    },
+    {
+      "name" : "Nike SB57 CHAMPS",
+      "price" : 14,
+      "rating" :5 ,
+      "image" : "https://i.ibb.co/QjVPJ2C/nike-2.jpg",
+      "brand" : " nike " ,
+      "gender" : "men",
+      "detail" : "Our members are one of a kind, and your shoes are, too. Each pair is proudly made one at a time, by hand. Good things are worth the wait."
+    },
+    {
+      "name" : "Nike Pegasus 39",
+      "price" : 12,
+      "rating" : 5,
+      "image" : "https://i.ibb.co/sV7y00h/nike-3.jpg",
+      "brand" : " nike" ,
+      "gender" : "men",
+      "detail" : "Keep your toes toasty and your feet bone dry in the workhorse with wings that does all the dirty work to shield your runs from bad weather. It provides water protection and all-terrain tire-like traction for downpours, first, but with a cozy fleece feel on the inside, thanks to an unbeatable duo of Heathered lining and structured insulation inspired by our Aeroloft technology."
+    },
+    {
+      "name" : "DAILY 3.0",
+      "price" : 14,
+      "rating" : 5,
+      "image" : "https://i.ibb.co/F5bzSzv/adidas-1.jpg",
+      "brand" : "adidas" ,
+      "gender" : "men",
+      "detail" : "A fresh take on a classic, these adidas shoes blend a heritage feel with modern materials and design. Your walk across campus has never looked or felt this good."
+    },
+    {
+      "name" : "QUESTAR FLOW NXT",
+      "price" : 12,
+      "rating" : 5,
+      "image" : "https://i.ibb.co/wR6Dd4Y/adidas-2.jpg",
+      "brand" : "adidas" ,
+      "gender" : "men",
+      "detail" : "With clean design and a comfort-forward build, these adidas shoes slide right into your daily rotation. They're lightweight and breathable, thanks to the knit mesh upper."
+    },
+    {
+      "name" : "SUPERSTAR SHOES",
+      "price" : 13,
+      "rating" : 4,
+      "image" : "https://i.ibb.co/B2CKn14/adidas-4.jpg",
+      "brand" : "adidas" ,
+      "gender" : "men",
+      "detail" : ""
+    },
+    {
+      "name" : "ULTRABOOST 22",
+      "price" : 12,
+      "rating" : 5,
+      "image" : "https://i.ibb.co/5x01nYV/adidas-w-1.jpg",
+      "brand" : "adidas" ,
+      "gender" : "women",
+      "detail" : "With the help of 1.2 million foot scans, we updated Ultraboost with a complete 360° female fit improvement. And we didn't stop there. We re-engineered the rubber outsole."
+    },
+    {
+      "name" : "Nike Air Max 90",
+      "price" : 12,
+      "rating" :4 ,
+      "image" : "https://i.ibb.co/gWcG8X7/nike-w-1.jpg",
+      "brand" : "adidas" ,
+      "gender" : "women",
+      "detail" : "Lace up and feel the legacy. Produced at the intersection of art, music and culture, these champion running shoes helped define the ‘90s. Revolutionized through collabs and celebrated through rare colorways, its striking visuals, Waffle outsole, and exposed Air cushioning keep it alive and well."
+    },
+    {
+        "name": "Rocks 12E",
+        "price" : 90,
+        "rating" :5 ,
+        "image" : "https://i.ibb.co/jvhfYPv/casual-1.png",
+        "brand": "others",
+        "gender" : "men",
+        "detail" : "Take your love for the game with you wherever you go. Crossing hardwood comfort with off-court flair, these kicks put a fresh spin on a hoops classic with basketball-inspired Swoosh logos and a woven net-inspired upper."
+    },
+    {
+        "name": "Flying 12E",
+        "price" : 95,
+        "rating" :5 ,
+        "image" : "https://i.ibb.co/6nrqbdN/casual-w-1.png",
+        "brand": "others",
+        "gender" : "women",
+        "detail" : "From tough stitching to pristine materials to the cupsole design, these sneakers deliver durable style that’s smoother than backboard glass."
+    }
+]
