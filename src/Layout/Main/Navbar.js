@@ -21,17 +21,18 @@ const Navbar = () => {
        
       </li>
       <li>
-       <Link className="text-white bg-[#001134] px-5 shadow-sm rounded-md py-2  ">
+        <BsFillCartCheckFill size={30} />
+      </li>
+      <li>
+       <Link className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
        <button >Login</button>
        </Link>
       </li>
-      <li>
-        <BsFillCartCheckFill size={30} />
-      </li>
+      
     </>
   );
   return (
-    <nav className="w-full  text-[#001134] shadow">
+    <nav className="w-full  text-[#000000] shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between   md:block">
