@@ -89,50 +89,5 @@
         "brand": "others",
         "gender" : "women",
         "detail" : "From tough stitching to pristine materials to the cupsole design, these sneakers deliver durable style that’s smoother than backboard glass."
-    },
-    {
-      "name" : "SUPERSTAR SHOES",
-      "price" : 130,
-      "rating" : 4,
-      "image" : "https://i.ibb.co/B2CKn14/adidas-4.jpg",
-      "brand" : "adidas" ,
-      "gender" : "men",
-      "detail" : ""
-    },
-    {
-      "name" : "ULTRABOOST 22",
-      "price" : 125,
-      "rating" : 5,
-      "image" : "https://i.ibb.co/5x01nYV/adidas-w-1.jpg",
-      "brand" : "adidas" ,
-      "gender" : "women",
-      "detail" : "With the help of 1.2 million foot scans, we updated Ultraboost with a complete 360° female fit improvement. And we didn't stop there. We re-engineered the rubber outsole."
-    },
-    {
-      "name" : "Nike Air Max 90",
-      "price" : 128,
-      "rating" :4 ,
-      "image" : "https://i.ibb.co/gWcG8X7/nike-w-1.jpg",
-      "brand" : "adidas" ,
-      "gender" : "women",
-      "detail" : "Lace up and feel the legacy. Produced at the intersection of art, music and culture, these champion running shoes helped define the ‘90s. Revolutionized through collabs and celebrated through rare colorways, its striking visuals, Waffle outsole, and exposed Air cushioning keep it alive and well."
-    },
-    {
-        "name": "Rocks 12E",
-        "price" : 90,
-        "rating" :5 ,
-        "image" : "https://i.ibb.co/jvhfYPv/casual-1.png",
-        "brand": "others",
-        "gender" : "men",
-        "detail" : "Take your love for the game with you wherever you go. Crossing hardwood comfort with off-court flair, these kicks put a fresh spin on a hoops classic with basketball-inspired Swoosh logos and a woven net-inspired upper."
-    },
-    {
-        "name": "Flying 12E",
-        "price" : 95,
-        "rating" :5 ,
-        "image" : "https://i.ibb.co/6nrqbdN/casual-w-1.png",
-        "brand": "others",
-        "gender" : "women",
-        "detail" : "From tough stitching to pristine materials to the cupsole design, these sneakers deliver durable style that’s smoother than backboard glass."
     }
 ]

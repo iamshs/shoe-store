@@ -35,8 +35,8 @@ const Navbar = () => {
         <BsFillCartCheckFill size={30} />
       </li>
       <li>
-       <Link className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
-       <button >Login</button>
+       <Link to={'/login'} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
+        Login
        </Link>
       </li>
       

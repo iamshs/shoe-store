@@ -8,13 +8,14 @@ const Pagination = ({shoesPerPage,totalShoes,paginate,currentPage}) => {
      pageNumber.push(i)
     }
 
-   
     return (
         
-<nav className='py-4'>
+<nav className='py-6'>
   <ul className='flex items-center justify-center gap-3 '>
-  {pageNumber.map(number => <li className='border-2 border-black bg-white w-6 text-center' key={number} >
-                    <Link onClick={()=>paginate(number)} href='!#' >{number} </Link>
+  {pageNumber.map(number => <li  key={number} >
+                    <Link onClick={()=>paginate(number)} 
+                    className={`page-link ${currentPage === number ? "bg-black text-white px-3 py-1 rounded-sm" : "px-2 py-1 rounded-sm" }`} 
+                    href='!#' >{number} </Link>
                 </li> )}
   </ul>
 </nav>

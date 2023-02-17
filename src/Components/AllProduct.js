@@ -16,7 +16,7 @@ if(isLoading)
         initial="hidden"
         animate="visible"
        className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6
-        lg:px-14 px-4 place-items-center py-2 lg:py-4'>
+        lg:px-14 px-4 place-items-center py-4 md:py-6 lg:py-8'>
            {
             shoes.map((shoe,i) => <motion.div variants={item}
             className="border-2 rounded-md  lg:max-w-xs md:max-w-xs w-[90%] md:w-full lg:w-full h-[22rem]

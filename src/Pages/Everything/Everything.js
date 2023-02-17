@@ -7,7 +7,7 @@ import useProducts from "../../hooks/useProducts";
 const Everything = () => {
   const [shoes, isLoading] = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
-  const [shoesPerPage] = useState(5);
+  const [shoesPerPage] = useState(8);
 
 
   if (isLoading) {
