@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-  const [data, setData] = useState("");
+  const onSubmit = data => {console.log(data)};
   return (
  <>
  <div className=" lg:min-h-[100vh] md:min-h-[60vh] min-h-[70vh] bg-[#F9FAFB] grid place-content-center ">
@@ -18,7 +18,7 @@ const Login = () => {
               </Link>
             </p>
           </header>
-          <form className="mt-[5rem]" onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
+          <form className="mt-[4.5rem]" onSubmit={handleSubmit(onSubmit)}>
             <label
               className="text-[1rem] text-[#18181B] font-[400]"
               htmlFor="email"
@@ -29,7 +29,7 @@ const Login = () => {
               type="email"
               id="email"
               className="w-full border-[1px] border-[#A1A1AA] lg:h-[3.8rem] h-[2.8rem]  
-              lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] my-4 lg:text-[1.5rem] text-[1rem] p-4"
+              lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] my-4 lg:text-[1.4rem] text-[1rem] p-4"
               {...register("email")}
             />
             <label
@@ -41,7 +41,7 @@ const Login = () => {
             <input
               className="w-full border-[1px] border-[#A1A1AA]  h-[2.8rem]  
               lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] 
-              lg:h-[3.8rem] my-4 lg:text-[1.5rem] text-[1rem] p-4"
+              lg:h-[3.8rem] my-4 lg:text-[1.4rem] text-[1rem] p-4"
               type="password"
               id="password"
               {...register("password")}
@@ -49,11 +49,19 @@ const Login = () => {
             />
             <button
            
-              className="mt-8 text-[1rem] bg-[#18181B] w-full lg:p-[1.2rem] p-[0.85rem]
+              className="mt-6 text-[1rem] font-semibold hover:bg-black bg-[#18181B] w-full lg:p-[1.2rem] p-[0.85rem]
                md:p-[1.1rem] text-white rounded-[0.7rem] "
             >
               {/* {loading ? <Spinner size={20} /> : "Sign in"} */}
               Login
+            </button>
+            <button
+           
+              className="mt-6 text-[1rem] font-semibold bg-[#ffffff] w-full lg:p-[1.04rem] p-[0.85rem]
+               md:p-[1.1rem] text-black rounded-[0.7rem] hover:bg-[#18181B] hover:text-white border-2 border-black "
+            >
+              {/* {loading ? <Spinner size={20} /> : "Sign in"} */}
+             Continue with google
             </button>
           </form>
         </div>
