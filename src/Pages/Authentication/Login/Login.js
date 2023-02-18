@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Login = () => {
+  const {loginUser} = useContext(AuthContext)
   const { register, handleSubmit , formState: { errors } } = useForm();
-  const onSubmit = data => {console.log(data)};
+  const onSubmit = data => {
+    loginUser(data.email,data.password)
+    .then( result =>{
+      const user = result.user
+      toast.success('Successfully Login');
+      console.log(user)
+    })
+    .catch(error =>{
+      console.log(error);
+    })
+    console.log(data)
+  };
   return (
  <>
  <div className=" lg:min-h-[100vh]  min-h-[70vh] bg-[#F9FAFB] grid place-content-center ">

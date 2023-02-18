@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
@@ -16,6 +17,7 @@ const Register = () => {
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
+        toast.success('Successfully created an user!');
         console.log(user);
       })
       .catch((error) => {
