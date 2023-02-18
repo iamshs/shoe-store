@@ -20,33 +20,35 @@ const Login = () => {
             </p>
           </header>
           <form className="mt-[4.5rem]" onSubmit={handleSubmit(onSubmit)}>
-            <label
+            {/* <label
               className="text-[1rem] text-[#18181B] font-[400]"
               htmlFor="email"
             >
               Email
-            </label>
+            </label> */}
             <input
               type="email"
               id="email"
+              placeholder="Your Email"
               className="w-full border-[1px] border-[#A1A1AA] lg:h-[3.8rem] h-[2.8rem]  
-              lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] my-3 mb-1 lg:text-[1.4rem] text-[1rem] p-4"
+              lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] my-3 mb-1 lg:text-[1.2rem] text-[1rem] p-4"
               {...register("email", { 
                 required: "Email is required" 
             })}
             />
             {errors.email && <p className="text-red-600 my-1" role="alert">{errors.email?.message}</p>}
-            <label
+            {/* <label
               className="text-[1rem] text-[#18181B] font-[400]"
               htmlFor="password"
             >
               Password
-            </label>
+            </label> */}
             <input
               className="w-full border-[1px] border-[#A1A1AA]  h-[2.8rem]  
               lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] 
-              lg:h-[3.8rem] my-3 mb-1 lg:text-[1.4rem] text-[1rem] p-4"
+              lg:h-[3.8rem] my-3 mb-1 lg:text-[1.2rem] text-[1rem] p-4"
               type="password"
+              placeholder="Your Password"
               id="password"
               {...register("password" , { 
                 required: "Password is required" ,
