@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import Logo from "../../assets/logo.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  
+  const {user} = useContext(AuthContext)
 
   let activeClassName = " font-bold underline ";
   const menuItems = (
@@ -34,11 +35,17 @@ const Navbar = () => {
       <li>
         <BsFillCartCheckFill size={30} />
       </li>
-      <li>
+     {
+      user?.uid?  <li>
+      <Link to={'/login'} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
+      Logout
+      </Link>
+     </li> :  <li>
        <Link to={'/login'} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
         Login
        </Link>
       </li>
+     }
       
     </>
   );
