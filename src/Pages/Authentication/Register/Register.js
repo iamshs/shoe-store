@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -11,6 +13,14 @@ const Register = () => {
   } = useForm();
 
   const handleSignUp = (data) => {
+    createUser(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     console.log(data);
   };
 
@@ -87,10 +97,10 @@ const Register = () => {
                   value: 6,
                   message: "Password must be minimum 6 character",
                 },
-                pattern : {
-                  value : /(?=.*[A-Z])/,
-                  message: "Password should contain at least one uppercase"       
-                }
+                pattern: {
+                  value: /(?=.*[A-Z])/,
+                  message: "Password should contain at least one uppercase",
+                },
               })}
             />
             {errors.password && (

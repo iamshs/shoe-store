@@ -6,7 +6,7 @@ const Banner = () => {
   const transition = { type: "spring", duration: 1 };
  
   return (
-    <section className="bg-home">
+    <section className="bg-home ">
       <div className="relative">
         <motion.h1
           transition={transition}

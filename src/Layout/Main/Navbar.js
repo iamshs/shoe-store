@@ -43,7 +43,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className="w-full  text-[#000000] shadow">
+    <nav className=" min-w-screen text-[#000000] shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between   md:block">
