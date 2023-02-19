@@ -7,7 +7,14 @@ import { AuthContext } from "../../contexts/AuthProvider";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const {user} = useContext(AuthContext)
+  const { user,logout } = useContext(AuthContext) ;
+
+
+  const handleSignOut = () =>{
+      logout()
+      .then(() => {})
+      .catch( err => console.log(err))
+  }
 
   let activeClassName = " font-bold underline ";
   const menuItems = (
@@ -37,9 +44,9 @@ const Navbar = () => {
       </li>
      {
       user?.uid?  <li>
-      <Link to={'/login'} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
+      <button onClick={handleSignOut} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
       Logout
-      </Link>
+      </button>
      </li> :  <li>
        <Link to={'/login'} className="text-white bg-[#040404] text-sm px-5 shadow-sm rounded-md py-2  ">
         Login

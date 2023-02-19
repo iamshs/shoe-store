@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
@@ -6,7 +6,8 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser , updateUser } = useContext(AuthContext);
+  const [signUpError , setSignUpError] = useState("")
   const {
     register,
     handleSubmit,
@@ -15,15 +16,23 @@ const Register = () => {
 
   const handleSignUp = (data) => {
     createUser(data.email, data.password)
+    setSignUpError("")
       .then((result) => {
         const user = result.user;
         toast.success('Successfully created an user!');
         console.log(user);
+        const userInfo = {
+          displayName : data.name
+        }
+        updateUser(userInfo)
+        .then( () => {})
+        .catch ( err => console.log(err))
       })
       .catch((error) => {
+        setSignUpError(error.message)
         console.log(error);
       });
-    console.log(data);
+   
   };
 
   return (
@@ -42,12 +51,6 @@ const Register = () => {
             </p>
           </header>
           <form onSubmit={handleSubmit(handleSignUp)} className="mt-[2.5rem]">
-            {/* <label
-              className="text-[1rem] text-[#18181B] font-[400]"
-              htmlFor="email"
-            >
-              Full Name
-            </label> */}
             <input
               type="text"
               id="name"
@@ -61,12 +64,7 @@ const Register = () => {
             {errors.name && (
               <p className="text-red-600">{errors.name.message} </p>
             )}
-            {/* <label
-              className="text-[1rem] text-[#18181B] font-[400]"
-              htmlFor="email"
-            >
-              Email
-            </label> */}
+
             <input
               type="email"
               id="email"
@@ -80,12 +78,7 @@ const Register = () => {
             {errors.email && (
               <p className="text-red-600">{errors.email.message} </p>
             )}
-            {/* <label
-              className="text-[1rem] text-[#18181B] font-[400]"
-              htmlFor="password"
-            >
-              Password
-            </label> */}
+
             <input
               className="w-full border-[1px] border-[#A1A1AA]  h-[2.8rem]  
                      lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] 
@@ -115,6 +108,7 @@ const Register = () => {
               {/* {loading ? <Spinner size={20} /> : "Sign in"} */}
               Sign up
             </button>
+            { signUpError && <p className="text-red-600">{signUpError} </p>}
             <Divider />
             <button
               className="mt-3 text-[1rem] font-semibold bg-[#ffffff] w-full lg:p-[1.04rem] p-[0.85rem]
