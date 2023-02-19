@@ -12,6 +12,7 @@ const Register = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const handleSignUp = (data) => {
@@ -20,6 +21,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         toast.success('Successfully created an user!');
+        reset()
         console.log(user);
         const userInfo = {
           displayName : data.name

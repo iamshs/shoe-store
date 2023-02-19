@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
@@ -6,19 +7,33 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser , loginProvider } = useContext(AuthContext);
   const [loginError , setLoginError] = useState("")
+  const googleProvider = new GoogleAuthProvider() ;
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
+
+const handleGoogleLogin = () =>{
+  loginProvider(googleProvider)
+  .then( result => {
+    const googleUser = result.user
+    console.log(googleUser);
+  })
+  .catch(error => console.log(error))
+}
+
   const onSubmit = (data) => {
     loginUser(data.email, data.password)
     setLoginError("")
       .then((result) => {
         const user = result.user;
         toast.success("Successfully Login");
+        reset()
         console.log(user);
       })
       .catch((error) => {
@@ -27,6 +42,7 @@ const Login = () => {
       });
     console.log(data);
   };
+
   return (
     <>
       <div className=" lg:min-h-[100vh]  min-h-[70vh] bg-[#F9FAFB] grid place-content-center ">
@@ -44,12 +60,7 @@ const Login = () => {
             </p>
           </header>
           <form className="mt-[4.5rem]" onSubmit={handleSubmit(onSubmit)}>
-            {/* <label
-              className="text-[1rem] text-[#18181B] font-[400]"
-              htmlFor="email"
-            >
-              Email
-            </label> */}
+           
             <input
               type="email"
               id="email"
@@ -66,12 +77,7 @@ const Login = () => {
                 {errors.email?.message}
               </p>
             )}
-            {/* <label
-              className="text-[1rem] text-[#18181B] font-[400]"
-              htmlFor="password"
-            >
-              Password
-            </label> */}
+        
             <input
               className="w-full border-[1px] border-[#A1A1AA]  h-[2.8rem]  
               lg:rounded-[0.7rem] md:rounded-[0.6rem] md:h-[3.5rem] rounded-[0.5rem] 
@@ -106,6 +112,7 @@ const Login = () => {
             </div>
             <Divider />
             <button
+            onClick={handleGoogleLogin}
               className="mt-3 text-[1rem] font-semibold bg-[#ffffff] w-full lg:p-[1.04rem] p-[0.85rem]
                md:p-[1.1rem] text-black rounded-[0.7rem] hover:bg-[#18181B] hover:text-white border-2 border-black "
             >
