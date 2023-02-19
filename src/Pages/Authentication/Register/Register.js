@@ -1,28 +1,45 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Spinner from "../../../Components/Spinner";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Register = () => {
-  const { createUser , updateUser } = useContext(AuthContext);
+  const { createUser , updateUser , loginProvider  } = useContext(AuthContext);
   const [signUpError , setSignUpError] = useState("")
+  const googleProvider = new GoogleAuthProvider() ;
+ const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset
   } = useForm();
+//google login
+
+const handleGoogleLogin = () =>{
+  loginProvider(googleProvider)
+  .then( result => {
+    const googleUser = result.user
+    console.log(googleUser);
+  })
+  .catch(error => console.log(error))
+}
+
+
 
   const handleSignUp = (data) => {
-    createUser(data.email, data.password)
     setSignUpError("")
+    createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        toast.success('Successfully created an user!');
-        reset()
+
         console.log(user);
+        toast.success('Successfully created an user!');
+        navigate("/")
         const userInfo = {
           displayName : data.name
         }
@@ -34,8 +51,12 @@ const Register = () => {
         setSignUpError(error.message)
         console.log(error);
       });
-   
+
+      reset()
+     
   };
+
+
 
   return (
     <>
@@ -113,6 +134,7 @@ const Register = () => {
             { signUpError && <p className="text-red-600">{signUpError} </p>}
             <Divider />
             <button
+            onClick={handleGoogleLogin}
               className="mt-3 text-[1rem] font-semibold bg-[#ffffff] w-full lg:p-[1.04rem] p-[0.85rem]
                       md:p-[1.1rem] text-black rounded-[0.7rem] hover:bg-[#18181B] hover:text-white border-2 border-black "
             >
