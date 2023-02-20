@@ -7,7 +7,7 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 import Divider from "../Divider/Divider";
 
 const Login = () => {
-  const { loginUser, loginProvider , loading } = useContext(AuthContext);
+  const { loginUser, loginProvider  } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
   const googleProvider = new GoogleAuthProvider();
   const navigate = useNavigate();

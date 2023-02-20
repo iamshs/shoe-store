@@ -14,7 +14,7 @@
       "price" : 140,
       "rating" :5 ,
       "image" : "https://i.ibb.co/QjVPJ2C/nike-2.jpg",
-      "brand" : " nike " ,
+      "brand" : "nike" ,
       "gender" : "men",
       "detail" : "Our members are one of a kind, and your shoes are, too. Each pair is proudly made one at a time, by hand. Good things are worth the wait."
     },
@@ -23,7 +23,7 @@
       "price" : 120,
       "rating" : 5,
       "image" : "https://i.ibb.co/sV7y00h/nike-3.jpg",
-      "brand" : " nike" ,
+      "brand" : "nike" ,
       "gender" : "men",
       "detail" : "Keep your toes toasty and your feet bone dry in the workhorse with wings that does all the dirty work to shield your runs from bad weather. It provides water protection and all-terrain tire-like traction for downpours, first, but with a cozy fleece feel on the inside, thanks to an unbeatable duo of Heathered lining and structured insulation inspired by our Aeroloft technology."
     },

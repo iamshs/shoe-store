@@ -8,6 +8,8 @@ const Everything = () => {
   const [shoes, isLoading] = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
   const [shoesPerPage] = useState(8);
+
+  
   
 
   //handle price
