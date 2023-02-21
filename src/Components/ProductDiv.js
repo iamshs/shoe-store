@@ -19,7 +19,7 @@ const ProductDiv = ({shoe}) => {
               />
               <div className="flex flex-col justify-center gap-5 h-[40%] bg-white px-3  ">
                 <h2 className="text-[#797575] font-bold"> {shoe.name} </h2>
-                <h2>Brand : {shoe.brand} </h2>
+                <h2>For : {shoe.gender} </h2>
                 <Rating
                   name="read-only"
                   size="small"

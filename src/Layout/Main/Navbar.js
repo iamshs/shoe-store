@@ -57,17 +57,17 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className=" min-w-screen text-[#000000] shadow">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <nav className=" text-[#000000] shadow">
+      <div className="justify-between px-4 mx-auto  md:items-center lg:flex lg:px-12">
         <div>
-          <div className="flex items-center justify-between   md:block">
+          <div className="flex items-center justify-between   lg:block">
             <div className="flex items-center justify-between w-42">
               <img src={Logo} alt="Logo" className="w-16" />
               <Link to="/">
                 <h2 className="text-xl font-bold">ShoesShop</h2>
               </Link>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 className="p-2 text-base-100 rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
@@ -107,12 +107,12 @@ const Navbar = () => {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
               navbar ? "block" : "hidden"
             }`}
           >
             <ul className="items-center text-md font-semibold
-              justify-between space-y-8 md:flex md:space-x-6 md:space-y-0">
+              justify-between space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {menuItems}
             </ul>
           </div>

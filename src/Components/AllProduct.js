@@ -16,6 +16,15 @@ const AllProduct = ({ shoes, isLoading }) => {
     setProducts(shoes.filter((shoe) => shoe.brand === brandName));
   };
 
+  // const genderType = genderName =>{
+  //   if (genderName === "men" || "women"){
+  //     setProducts(products.filter(shoe => shoe.gender === genderName))
+  //   }
+  //   else return shoes
+     
+
+  // }
+
   const handlePrice = (e) => {
     setInputPrice(e.target.value);
   };
@@ -24,8 +33,8 @@ const AllProduct = ({ shoes, isLoading }) => {
     return <Spinner />;
   }
   return (
-    <main className=" flex gap-4 flex-col lg:flex-row items-start justify-center py-4 md:py-6 lg:py-8  lg:px-3 px-6 ">
-      <section className="bg-white shadow-md rounded-lg ">
+    <main className=" flex gap-4 flex-col lg:flex-row items-center lg:items-start justify-center py-4 md:py-6 lg:py-8  lg:px-3 px-6 ">
+      <section className="  w-[full] md:p-4 lg:shadow-md rounded-lg ">
         <div className="py-8 lg:px-8 flex items-center flex-col gap-3">
           {/* search---field */}
 
@@ -38,35 +47,43 @@ const AllProduct = ({ shoes, isLoading }) => {
           </div>
 
           {/* choose---brand */}
-          <div className="w-full my-8 ">
-            <ul className=" flex lg:flex-col flex-row gap-2">
-              <li
-                className=" flex hover:cursor-pointer text-xl items-center gap-2 p-2 rounded-lg"
+          <div className="w-full my-8  ">
+            <ul className=" grid grid-cols-2 place-items-center gap-4">
+              <motion.li
+               whileHover={{ scale: 1.1 }}
+               whileTap={{ scale: 0.9 }}
+                className=" flex hover:cursor-pointer shadow-md  py-3 px-6 rounded-sm  text-lg items-center gap-2 bg-white  "
                 onClick={() => setProducts(shoes)}
               >
                 All Products
-              </li>
-              <li
-                className=" flex hover:cursor-pointer items-center shadow-md w-[50%] p-4 text-lg gap-2 rounded-lg"
+              </motion.li>
+              <motion.li
+               whileHover={{ scale: 1.1 }}
+               whileTap={{ scale: 0.9 }}
+                className=" flex hover:cursor-pointer bg-white items-center shadow-md  px-6 py-3 text-lg gap-2 rounded-sm"
                 onClick={() => filter("adidas")}
               >
                 <span>Adidas</span> <SiAdidas size={25} />{" "}
-              </li>
-              <li
-                className=" flex hover:cursor-pointer text-lg items-center gap-2 shadow-md w-[50%] p-4 rounded-lg"
+              </motion.li>
+              <motion.li
+               whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className=" flex hover:cursor-pointer text-lg bg-white items-center gap-2 shadow-md  py-3 px-6 rounded-sm"
                 onClick={() => filter("nike")}
               >
                 {" "}
                 <span>Nike </span>
                 <SiNike size={25} />{" "}
-              </li>
-              <li
-                className=" flex hover:cursor-pointer text-lg items-center gap-2 shadow-md w-[50%] p-4 rounded-lg"
+              </motion.li>
+              <motion.li
+               whileHover={{ scale: 1.1 }}
+               whileTap={{ scale: 0.9 }}
+                className=" flex hover:cursor-pointer text-lg bg-white items-center gap-2 shadow-md  px-6 py-3 rounded-sm"
                 onClick={() => filter("others")}
               >
-               <span> Others</span>
-                <AiOutlineSmallDash size={25}/>
-              </li>
+                <span> Others</span>
+                <AiOutlineSmallDash size={25} />
+              </motion.li>
             </ul>
           </div>
 
@@ -85,6 +102,26 @@ const AllProduct = ({ shoes, isLoading }) => {
             />
           </div>
 
+          {/* <div className="flex lg:flex-col flex-row my-10 gap-3 w-full">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-[#c2d5de]  px-4 font-semibold py-4 shadow-lg text-xl rounded-br-3xl rounded-tl-md
+              rounded-tr-md rounded-bl-md"
+              onClick={() => genderType("men")}
+            >
+              Men
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-[#ff70b5] text-white px-4 font-semibold shadow-lg py-4 text-xl rounded-br-3xl rounded-tl-md
+                rounded-tr-md rounded-bl-md "
+                onClick={() => genderType("women")}
+            >
+              Women
+            </motion.button>
+          </div> */}
         </div>
       </section>
       <motion.div
