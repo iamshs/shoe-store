@@ -90,7 +90,7 @@ const AllProduct = ({ shoes, isLoading }) => {
           {/* filter----by----price */}
           <div>
             <h1 className="lg:text-3xl text-xl">
-              Price: $({inputPrice} to 150){" "}
+              Price: $({inputPrice} to 150)
             </h1>
             <input
               type={"range"}

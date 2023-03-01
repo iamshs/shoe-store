@@ -4,6 +4,7 @@ import { FaHome } from "react-icons/fa";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import Logo from "../../assets/logo.png";
 import { AuthContext } from "../../contexts/AuthProvider";
+import { AiFillHeart } from "react-icons/ai";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -40,7 +41,10 @@ const Navbar = () => {
        
       </li>
       <li>
-        <BsFillCartCheckFill size={30} />
+        <NavLink><BsFillCartCheckFill size={30} /></NavLink>
+      </li>
+      <li>
+      <NavLink><AiFillHeart className="text-3xl"/></NavLink>
       </li>
      {
       user?.uid?  <li>

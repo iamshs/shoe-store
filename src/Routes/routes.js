@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main/Main";
+import AddToCart from "../Pages/AddToCart/AddToCart";
 import Login from "../Pages/Authentication/Login/Login";
 import PrivateRoute from "../Pages/Authentication/PrivateRoute/PrivateRoute";
 import Register from "../Pages/Authentication/Register/Register";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                path:"register",
                element : <Register />
+            },
+            {
+               path:"addToCart/:id",
+               element : <AddToCart />
             },
         ]
     }

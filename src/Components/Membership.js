@@ -1,6 +1,7 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Membership = () => {
   return (
@@ -8,13 +9,20 @@ const Membership = () => {
       <h2 className="lg:text-5xl lg:max-w-xl max-w-[50%] text-xl md:text-3xl tracking-wide font-bold">
         JOIN OUR CLUB & GET 15% OFF
       </h2>
-      <div className="flex items-center lg:w-[15rem] lg:py-4 py-2 px-2 hover:opacity-80 rounded-md text-white bg-black 
-      justify-center gap-1 lg:gap-4">
-        <Link to={"/register"} className="lg:text-2xl text-sm md:text-xl  font-semibold">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex items-center lg:w-[15rem] lg:py-4 py-2 px-2 hover:opacity-80 rounded-md text-white bg-black 
+      justify-center gap-1 lg:gap-4"
+      >
+        <Link
+          to={"/register"}
+          className="lg:text-2xl text-sm md:text-xl  font-semibold"
+        >
           SIGN UP FREE
         </Link>
         <BsArrowRight className="lg:text-4xl md:text-2xl text-lg" />
-      </div>
+      </motion.div>
     </section>
   );
 };

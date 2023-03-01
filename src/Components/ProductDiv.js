@@ -1,6 +1,6 @@
 import React from 'react';
 import Rating from "@mui/material/Rating";
-import { AiFillShopping } from "react-icons/ai";
+import { AiFillHeart, AiFillShopping } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { item } from "../helpers/framer-motion";
 
@@ -12,6 +12,7 @@ const ProductDiv = ({shoe}) => {
               className="border-2 rounded-md  lg:max-w-xs md:max-w-xs w-[90%] md:w-full lg:w-full h-[21rem]
              shadow-sm relative "
             >
+              <AiFillHeart className="absolute right-2 top-2 text-2xl hover:text-red-600 hover:cursor-pointer" />
               <img
                 src={shoe.image}
                 className=" mx-auto h-[50%] w-[80%] "

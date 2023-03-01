@@ -21,7 +21,7 @@ const NewArrival = () => {
       if (isLoading) {
         return <Spinner />;
       }
-      console.log(images);
+     
     return (
         <div className="s-container">
         <div className="arrival-header">
