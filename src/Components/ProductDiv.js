@@ -29,13 +29,15 @@ const ProductDiv = ({shoe}) => {
                 <h2 className="font-bold"> ${shoe.price} </h2>
                
               </div>
-              <button
+              <motion.button
+               whileHover={{ scale: 1.1 }}
+               whileTap={{ scale: 0.9 }}
                 className="flex items-center justify-center
             show-btn w-full py-2.5 rounded-b-lg gap-2 bg-black text-white  absolute bottom-0"
               >
                 Add to cart
                 <AiFillShopping size={24} />
-              </button>
+              </motion.button>
             </motion.div>
         </>
     );
