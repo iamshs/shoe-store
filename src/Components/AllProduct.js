@@ -34,7 +34,7 @@ const AllProduct = ({ shoes, isLoading }) => {
   }
   return (
     <main className=" flex gap-4 flex-col lg:flex-row items-center lg:items-start justify-center py-4 md:py-6 lg:py-8  lg:px-3 px-6 ">
-      <section className="  w-[full] md:p-4 lg:shadow-md rounded-lg ">
+      <section className="  w-[full] md:p-4  rounded-lg ">
         <div className="py-8 lg:px-8 flex items-center flex-col gap-3">
           {/* search---field */}
 
@@ -47,7 +47,7 @@ const AllProduct = ({ shoes, isLoading }) => {
           </div>
 
           {/* choose---brand */}
-          <div className="w-full my-8  ">
+          {/* <div className="w-full my-8  ">
             <ul className=" grid grid-cols-2 place-items-center gap-4">
               <motion.li
                whileHover={{ scale: 1.1 }}
@@ -85,7 +85,7 @@ const AllProduct = ({ shoes, isLoading }) => {
                 <AiOutlineSmallDash size={25} />
               </motion.li>
             </ul>
-          </div>
+          </div> */}
 
           {/* filter----by----price */}
           <div>
@@ -131,7 +131,7 @@ const AllProduct = ({ shoes, isLoading }) => {
         className="grid flex-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
        place-items-center "
       >
-        {products
+        {shoes
           .filter((shoe) => {
             return shoe.price > parseInt(inputPrice, 10);
           })

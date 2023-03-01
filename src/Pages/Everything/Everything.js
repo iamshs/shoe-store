@@ -8,6 +8,7 @@ const Everything = () => {
   const [shoes, isLoading] = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
   const [shoesPerPage] = useState(8);
+  
 
   
   
@@ -32,7 +33,7 @@ const Everything = () => {
   return (
     <div >
      
-      <AllProduct shoes={currentShoes} isLoading={isLoading} />
+      <AllProduct shoes={currentShoes}  isLoading={isLoading} />
       <Pagination
         shoesPerPage={shoesPerPage}
         totalShoes={shoes.length}

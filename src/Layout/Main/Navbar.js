@@ -57,7 +57,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className=" text-[#000000] shadow">
+    <nav className=" text-[#000000]  shadow">
       <div className="justify-between px-4 mx-auto  md:items-center lg:flex lg:px-12">
         <div>
           <div className="flex items-center justify-between   lg:block">

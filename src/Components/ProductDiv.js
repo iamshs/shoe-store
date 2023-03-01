@@ -9,7 +9,7 @@ const ProductDiv = ({shoe}) => {
         <>
         <motion.div
               variants={item}
-              className="border-2 rounded-md  lg:max-w-xs md:max-w-xs w-[90%] md:w-full lg:w-full h-[25rem]
+              className="border-2 rounded-md  lg:max-w-xs md:max-w-xs w-[90%] md:w-full lg:w-full h-[21rem]
              shadow-sm relative "
             >
               <img
@@ -17,9 +17,8 @@ const ProductDiv = ({shoe}) => {
                 className=" mx-auto h-[50%] w-[80%] "
                 alt={shoe.name}
               />
-              <div className="flex flex-col justify-center gap-5 h-[40%] bg-white px-3  ">
+              <div className="flex flex-col justify-center gap-3 h-[40%] bg-white px-3  ">
                 <h2 className="text-[#797575] font-bold"> {shoe.name} </h2>
-                <h2>For : {shoe.gender} </h2>
                 <Rating
                   name="read-only"
                   size="small"

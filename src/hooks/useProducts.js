@@ -4,7 +4,7 @@ const useProducts = () =>{
     const { data:shoes ,isLoading, error } = useQuery({
         queryKey: ['productData'],
         queryFn: () =>
-          fetch("shoes.json").then(
+          fetch("http://localhost:5000/products").then(
             (res) => res.json(),
           ),
       })

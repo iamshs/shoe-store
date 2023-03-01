@@ -1,0 +1,153 @@
+.s-container {
+    position: relative;
+    margin: 5rem 0;
+  }
+
+  .arrival-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 600;
+    gap: 4px;
+    margin: 5rem 1rem;
+    color: var(--primary-color);
+  }
+
+  .arrival-header h1{
+    font-size: 40px;
+  }
+
+  .arrival-header .arrow{
+    font-size: 3rem;
+  }
+  
+  .s-container .swiper {
+    width: 90%;
+    position: unset;
+    height: 50rem;
+  }
+  
+  .s-container .swiper-slide{
+      background: var(--primary-color);
+      box-sizing: border-box;
+      display: flex;
+      border-radius: 10px;
+      padding: 0.5rem;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .s-container .swiper-button-prev{
+      left: 2rem;
+      top: 60%;
+  }
+  .s-container .swiper-button-next{
+      right: 2rem;
+      top: 60%;
+  }
+
+  .s-container .swiper-button-next , .s-container .swiper-button-prev{
+    color: var(--secondary-color);
+}
+
+.image-p{
+    width: 100%;
+}
+
+
+@media screen and (max-width:767px) {
+   
+    .s-container {
+        position: relative;
+        margin: 2rem 0;
+      }
+    .s-container .swiper {
+        width: 90%;
+        position: unset;
+        height: 16rem;
+      
+      }
+
+      
+  .arrival-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin-left: 6px;
+    gap: 4px;
+    margin: 2rem 6px;
+    color: var(--primary-color);
+  }
+
+  .s-container .swiper-slide{
+    background: var(--primary-color);
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 10px;
+    padding: 0.1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+  .arrival-header .arrow{
+    font-size: 1.6rem;
+    
+  }
+  .arrival-header h1{
+    font-size: 24px;
+    
+  }
+
+  .s-container .swiper-button-prev{
+    left: 1rem;
+    top: 65%;
+}
+.s-container .swiper-button-next{
+    right: 1rem;
+    top: 65%;
+}
+
+      
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .s-container {
+        position: relative;
+        margin: 5rem 0;
+      }
+    .s-container .swiper {
+        width: 90%;
+        position: unset;
+        height: 30rem;
+      
+      } 
+
+      .s-container .swiper-button-prev{
+        left: 0.5rem;
+        top: 65%;
+    }
+    .s-container .swiper-button-next{
+        right: 0.5rem;
+        top: 65%;
+    }
+
+    .arrival-header{
+        margin: 4rem 1rem;
+    }
+
+   
+    .arrival-header .arrow{
+        font-size: 3rem;
+      }
+      .arrival-header h1{
+   
+        font-size: 40px;
+      }
+      
+     
+    
+}
+  
+  

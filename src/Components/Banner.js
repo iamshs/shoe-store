@@ -12,7 +12,7 @@ const Banner = () => {
           transition={transition}
           initial={{ left: -50 }}
           whileInView={{ left: 20 }}
-          className="lg:text-7xl text-4xl md:text-5xl text-white lg:top-32 md:top-24 top-12 absolute"
+          className="lg:text-7xl text-4xl md:text-5xl  lg:top-32 md:top-24 top-12 absolute"
         >
           Start Your Day
         </motion.h1>
@@ -25,7 +25,7 @@ const Banner = () => {
            
            duration:5,
          }}
-        className="lg:text-5xl text-2xl md:text-4xl text-white absolute top-24 md:top-40
+        className="lg:text-5xl text-2xl md:text-4xl  absolute top-24 md:top-40
           lg:top-56  lg:left-16 left-5">
           With Your Brand
         </motion.h2>
