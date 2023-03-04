@@ -22,18 +22,18 @@ const AddToCart = () => {
   console.log(shoe);
 
     return (
-        <main className='flex items-start justify-around min-h-screen lg:py-[5rem] '>
-          <section className='max-w-[55%] '>  
+        <main className='flex flex-col p-4 md:p-10 lg:p-0 gap-[2rem] md:gap-0 lg:gap-0 lg:flex-row items-center lg:items-start justify-around min-h-screen lg:py-[5rem] '>
+          <section className='lg:max-w-[55%] max-w-full '>  
            <img className='w-[100%]' src={shoe.image} alt="" />
           </section>
-          <section className='max-w-[40%] flex flex-col gap-24 '>
-            <div className='flex flex-col gap-10'>
+          <section className='lg:max-w-[40%] flex flex-col lg:gap-24 gap-12 '>
+            <div className='flex flex-col lg:gap-10 gap-3'>
             <div className='flex items-center gap-1'>
-            <div className='w-3 h-3 rounded-full bg-black'></div>
-            <h5 className='text-xl font-bold'> For {shoe.gender}  </h5>
+            <div className='lg:w-3 lg:h-3 h-2 w-2 rounded-full bg-black'></div>
+            <h5 className='lg:text-xl text-lg font-bold'> For {shoe.gender}  </h5>
             </div>
-            <h1 className='text-4xl font-semibold'> {shoe.name} </h1>
-            <h2 className='text-3xl font-bold'>${shoe.price} </h2>
+            <h1 className='lg:text-4xl md:text-2xl text-xl font-semibold'> {shoe.name} </h1>
+            <h2 className='lg:text-3xl md:text-xl text-lg font-bold'>${shoe.price} </h2>
             <div>
             <h3 className='text-lg '> Brand:<span className='font-bold'>{shoe.brand}</span> </h3>
             <Rating className='mt-6' name="read-only" size="large" value={shoe.rating} readOnly />
